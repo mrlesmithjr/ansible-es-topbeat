@@ -25,7 +25,7 @@ Role Variables
 ````
 ---
 # defaults file for ansible-es-topbeat
-es_topbeat_dashboard_dir: 'beats-dashboards-{{ es_topbeat_version }}'
+es_topbeat_dashboard_dir: '/opt/beats-dashboards-{{ es_topbeat_version }}'
 es_topbeat_dashboard_dl: 'http://download.elastic.co/beats/dashboards/{{ es_topbeat_dashboard_package }}'
 es_topbeat_dashboard_package: 'beats-dashboards-{{ es_topbeat_version }}.zip'
 es_topbeat_debian_package: 'topbeat_{{ es_topbeat_version }}_amd64.deb'
