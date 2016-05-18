@@ -3,11 +3,11 @@
   template:
     src: "etc/topbeat/topbeat.yml.j2"
     dest: "/etc/topbeat/topbeat.yml"
-    owner: root
-    group: root
+    owner: "root"
+    group: "root"
     mode: 0644
   notify:
-    - restart topbeat
+    - 'restart topbeat'
 
 - name: config_topbeat | loading topbeat ES Index Template
   command: "curl -XPUT 'http://{{ es_topbeat_elasticsearch_host }}/_template/topbeat' -d@/etc/topbeat/topbeat.template.json"
